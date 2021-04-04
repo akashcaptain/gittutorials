@@ -269,5 +269,58 @@ akash@AKASH-PC MINGW64 /d/gittutorials (master)
 $ git merge master1
 Already up to date.
 
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkot master1
+git: 'checkot' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkout master1
+error: Your local changes to the following files would be overwritten by checkout:
+        Commands.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m 'commit before checkout1'
+[master 5fa53d2] commit before checkout1
+ 1 file changed, 29 insertions(+)
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkout master1
+Switched to branch 'master1'
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git add Ext12.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git commit -m "master1 rebaising before commit"
+[master1 5d74c84] master1 rebaising before commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Ext12.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git checkout master
+Switched to branch 'master'
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  Extra1.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkout master1
+Switched to branch 'master1'
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git rebase master
+Successfully rebased and updated refs/heads/master1.
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git checkout master
+Switched to branch 'master'
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$
 
 
