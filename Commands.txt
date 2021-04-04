@@ -241,4 +241,33 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 akash@AKASH-PC MINGW64 /d/gittutorials (master|MERGING)
 
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m 'commit before merge1'
+[master 7780460] commit before merge1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Ext.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git merge master1
+Auto-merging Commands.txt
+CONFLICT (content): Merge conflict in Commands.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master|MERGING)
+$ git checkout master1
+error: you need to resolve your current index first
+Commands.txt: needs merge
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master|MERGING)
+$ git add Commands.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master|MERGING)
+$ git commit -a -m 'commit before merge2'
+[master b77bfa5] commit before merge2
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git merge master1
+Already up to date.
+
+
 
