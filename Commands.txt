@@ -103,5 +103,142 @@ $ git commit -m "adding first commit in local repo"
  create mode 100644 Commands.txt
 
 akash@AKASH-PC MINGW64 /d/gittutorials (master)
+<<<<<<< HEAD
 $git 
+=======
+$
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -m "adding first commit in local repo"
+[master a74d31f] adding first commit in local repo
+ 2 files changed, 67 insertions(+)
+ create mode 100644 Commands.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m "all together in local repo "
+[master 4834426] all together in local repo
+ 1 file changed, 10 insertions(+)
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Extra.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git add Extra.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m "all together in local repo "
+[master 66d5968] all together in local repo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Extra.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git log
+commit 66d59680ca7e69ee59c4c6966fefe095cfc68f95 (HEAD -> master)
+Author: akash1998 <akash.online98@gmail.com>
+Date:   Sun Apr 4 14:20:11 2021 +0530
+
+    all together in local repo
+
+commit 48344262c9ee11ef7c73af35b02b04de724caf8d
+Author: akash1998 <akash.online98@gmail.com>
+Date:   Sun Apr 4 14:19:42 2021 +0530
+
+    all together in local repo
+
+commit a74d31f38d10ed6e3b2be25beed28a7a6a83fa8f
+Author: akash1998 <akash.online98@gmail.com>
+Date:   Sun Apr 4 14:12:52 2021 +0530
+
+    adding first commit in local repo
+
+commit 6ada07ae4a90cdf0455304565bcce883b10571a5 (origin/master)
+Author: akash1998 <63636746+akashcaptain@users.noreply.github.com>
+Date:   Sun Apr 4 13:08:33 2021 +0530
+
+    Initial commit
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$
+
+>>>>>>> master1
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkout master1
+Switched to branch 'master1'
+M       Commands.txt
+A       Extra1.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  Extra1.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git commit -m "intial commit master1"
+[master1 5149bbf] intial commit master1
+ 2 files changed, 67 insertions(+)
+ create mode 100644 Extra1.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  Extra1.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git checkout master
+Switched to branch 'master'
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git merge master1
+error: Your local changes to the following files would be overwritten by merge:
+        Commands.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating 66d5968..5149bbf
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m 'commit before merge'
+[master 6ee61fd] commit before merge
+ 1 file changed, 33 insertions(+), 1 deletion(-)
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Ext.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git add Ext.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git commit -a -m 'commit before merge1'
+[master 7780460] commit before merge1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Ext.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git merge master1
+Auto-merging Commands.txt
+CONFLICT (content): Merge conflict in Commands.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master|MERGING)
+
 
