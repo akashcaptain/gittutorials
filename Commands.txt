@@ -62,6 +62,38 @@ Changes to be committed:
 
 akash@AKASH-PC MINGW64 /d/gittutorials (master)
 $ git add -A
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ git checkout master1
+Switched to branch 'master1'
+M       Commands.txt
+A       Extra1.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  Extra1.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git commit -m "intial commit master1"
+[master1 5149bbf] intial commit master1
+ 2 files changed, 67 insertions(+)
+ create mode 100644 Extra1.txt
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  Extra1.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master1)
+$ git checkout master
+Switched to branch 'master'
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$ ls
+Commands.txt  Ext.txt  Extra.txt  README.md
+
+akash@AKASH-PC MINGW64 /d/gittutorials (master)
+$
+
+
 
 
 akash@AKASH-PC MINGW64 /d/gittutorials (master)
@@ -71,5 +103,5 @@ $ git commit -m "adding first commit in local repo"
  create mode 100644 Commands.txt
 
 akash@AKASH-PC MINGW64 /d/gittutorials (master)
-$
+$git 
 
